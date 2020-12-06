@@ -1,29 +1,40 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <div class="App">
+    <LoadingBar />
+    <ErrorMessage />
+    <CurrentWeather />
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from './components/HelloWorld.vue';
+  import { Component, Provide, Vue } from 'vue-property-decorator';
 
-@Component({
-  components: {
-    HelloWorld,
-  },
-})
-export default class App extends Vue {}
+  import ErrorMessage from '@/components/ErrorMessage.vue';
+  import LoadingBar from '@/components/LoadingBar.vue';
+  import WeatherService from '@/services/WeatherService';
+  import CurrentWeather from '@/components/CurrentWeather.vue';
+
+  @Component({
+    components: {
+      CurrentWeather,
+      ErrorMessage,
+      LoadingBar,
+    },
+  })
+  export default class App extends Vue {
+    @Provide()
+    weatherService = new WeatherService();
+  }
 </script>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="sass">
+  @import './sass/main'
+</style>
+
+<style lang="sass" scoped>
+  @import './sass/vars'
+
+  .App
+    @include flex
+    height: 100%
 </style>
