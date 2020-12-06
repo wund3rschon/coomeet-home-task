@@ -14,10 +14,10 @@
       <span>Feels like {{ feelsLike }}°C</span>
     </h3>
     <p v-if="pressure != null" class="CurrentWeather-pressure">
-      Pressure stands at {{ pressure }}hPa
+      Pressure is at {{ pressure }}hPa
     </p>
     <p v-if="humidity != null" class="CurrentWeather-humidity">
-      Humidity is at {{ humidity }}%
+      Humidity is {{ humidity }}%
     </p>
     <p v-if="wind != null" class="CurrentWeather-wind">
       Wind is {{ wind.direction }} at about {{ wind.speed }}m/s
