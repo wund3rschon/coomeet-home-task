@@ -35,8 +35,8 @@
           );
         case ErrorCodesEnum.ACCESS_NOT_GRANTED:
           return (
-            'Unable to retrieve your location: no Geolocation API access was granted\n'
-            + 'Please check the access (e.g. by googling) and try again'
+            'Unable to retrieve your location: access to Geolocation API was blocked\n'
+            + 'Please unblock the access and try again'
           );
         case ErrorCodesEnum.INVALID_API_RESPONSE:
           return (

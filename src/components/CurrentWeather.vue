@@ -14,13 +14,17 @@
       <span>Feels like {{ feelsLike }}°C</span>
     </h3>
     <p v-if="pressure != null" class="CurrentWeather-pressure">
-      Pressure: {{ pressure }}hPa
+      Pressure stands at {{ pressure }}hPa
     </p>
     <p v-if="humidity != null" class="CurrentWeather-humidity">
-      Humidity: {{ humidity }}%
+      Humidity is at {{ humidity }}%
     </p>
     <p v-if="wind != null" class="CurrentWeather-wind">
-      Wind: {{ wind.direction }} at {{ wind.speed }}m/s
+      Wind is {{ wind.direction }} at about {{ wind.speed }}m/s
+      <template v-if="wind.gust">
+        <br />
+        <span>with gusts up to {{ wind.gust }}m/s</span>
+      </template>
     </p>
   </div>
 </template>
@@ -75,9 +79,10 @@
         return null;
       }
 
-      const { deg, speed } = wind;
+      const { deg, gust, speed } = wind;
       return {
         direction: getWindDirection(deg),
+        gust,
         speed,
       };
     }
@@ -91,13 +96,14 @@
     color: $secondary
     display: block
     font-size: 12px
+    margin-top: -4px
 
   .CurrentWeather
     background: lighten($bg, 3)
     border-radius: 4px
     box-shadow: 0 1px 4px rgba(black, 0.18)
     min-width: 56px * 4
-    padding: 18px 24px 24px
+    padding: 20px 24px
     text-align: center
 
   .CurrentWeather-heading
@@ -117,4 +123,9 @@
   .CurrentWeather-humidity,
   .CurrentWeather-wind
     font-size: 14px
+    margin-bottom: 4px
+
+  .CurrentWeather-wind
+    span
+      @extend %secondary
 </style>

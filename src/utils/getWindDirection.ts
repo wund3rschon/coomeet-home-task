@@ -1,20 +1,20 @@
 const ranges = [
-  'N/NE',
-  'NE',
-  'E/NE',
-  'E',
-  'E/SE',
-  'SE',
-  'S/SE',
-  'S',
-  'S/SW',
-  'SW',
-  'W/SW',
-  'W',
-  'W/NW',
-  'NW',
-  'N/NW',
-  'N',
+  'north-northeast',
+  'northeast',
+  'east-northeast',
+  'east',
+  'east-southeast',
+  'southeast',
+  'south-southeast',
+  'south',
+  'south-southwest',
+  'southwest',
+  'west-southwest',
+  'west',
+  'west-northwest',
+  'northwest',
+  'north-northwest',
+  'north',
 ];
 
 const getWindDirection = (degree: number) => {
@@ -34,7 +34,7 @@ const getWindDirection = (degree: number) => {
     null,
   );
 
-  return direction ?? 'N';
+  return direction ?? 'north';
 };
 
 export default getWindDirection;
