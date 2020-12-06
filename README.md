@@ -19,3 +19,6 @@ npm ci && npm run serve
 
 The server should be available at http://localhost:8080
 
+![](https://i.gyazo.com/49aa1a9cda4a5f707cd8a33c11d88cb3.png)
+
+![](https://i.gyazo.com/56fd65416bbb0880e914b82054193ef7.png)
