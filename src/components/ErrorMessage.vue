@@ -49,7 +49,7 @@
             + 'Please check your network connection and try again'
           );
         default:
-          throw new ReferenceError(`Unknown error code: ${this.weatherService.errorCode}`);
+          return null;
       }
     }
 

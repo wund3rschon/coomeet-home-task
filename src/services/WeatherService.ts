@@ -16,8 +16,8 @@ const createEndpoint = ({ coords: { latitude, longitude } }: Position) => {
 
 @Component
 export default class WeatherService extends Vue {
-  errorCode: ErrorCodesEnum | null = null;
-  weather: Weather | null = null;
+  errorCode: Maybe<ErrorCodesEnum> = null;
+  weather: Maybe<Weather> = null;
 
   created() {
     if ('geolocation' in navigator) {
