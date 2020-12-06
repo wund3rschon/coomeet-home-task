@@ -11,22 +11,11 @@ The goal is to build a simple app showing current weather based on user's locati
 - no external libraries
 
 ## Project setup
+
+To start a development server, open the terminal and run
 ```
-npm ci
+npm ci && npm run serve
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
+The server should be available at http://localhost:8080
 
