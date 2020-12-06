@@ -5,8 +5,8 @@ import Weather from '@/types/Weather';
 
 const createEndpoint = ({ coords: { latitude, longitude } }: Position) => {
   const params = new URLSearchParams([
-    ['lat', latitude.toString()],
-    ['lon', longitude.toString()],
+    ['lat', latitude.toFixed(2)],
+    ['lon', longitude.toFixed(2)],
     ['units', 'metric'],
     ['appid', 'ac89a3cd8a2ad2eb523eb7c3a2db8cdc'],
   ]);

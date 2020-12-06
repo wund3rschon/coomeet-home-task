@@ -60,25 +60,28 @@
   }
 </script>
 
-<style lang="sass" scoped>
-  @import '../sass/vars'
+<style lang="scss" scoped>
+  @import '../style/vars';
 
-  .ErrorMessage
-    @include flex($direction: column)
-    color: $accent
-    text-align: center
-    white-space: pre-line
+  .ErrorMessage {
+    @include flex($direction: column);
+    color: $accent;
+    text-align: center;
+    white-space: pre-line;
+  }
 
-  .ErrorMessage-icon
-    @include size(48px)
-    background: lighten($bg, 3)
-    border-radius: 50%
-    box-shadow: 0 1px 4px rgba(black, 0.18)
-    cursor: pointer
-    fill: $secondary
-    margin-top: 24px
-    padding: 12px
-    transition: box-shadow 0.28s ease
-    &:hover
-      box-shadow: 0 2px 8px rgba(black, 0.26)
+  .ErrorMessage-icon {
+    @include size(48px);
+    background: lighten($bg, 3);
+    border-radius: 50%;
+    box-shadow: 0 1px 4px rgba(black, 0.18);
+    cursor: pointer;
+    fill: $secondary;
+    margin-top: 24px;
+    padding: 12px;
+    transition: box-shadow 0.28s ease;
+    &:hover {
+      box-shadow: 0 2px 8px rgba(black, 0.26);
+    }
+  }
 </style>

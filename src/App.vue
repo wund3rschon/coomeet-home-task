@@ -27,14 +27,15 @@
   }
 </script>
 
-<style lang="sass">
-  @import './sass/main'
+<style lang="scss">
+  @import 'style/main';
 </style>
 
-<style lang="sass" scoped>
-  @import './sass/vars'
+<style lang="scss" scoped>
+  @import 'style/vars';
 
-  .App
-    @include flex
-    height: 100%
+  .App {
+    @include flex;
+    height: 100%;
+  }
 </style>

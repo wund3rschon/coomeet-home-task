@@ -89,43 +89,53 @@
   }
 </script>
 
-<style lang="sass" scoped>
-  @import '../sass/vars'
+<style lang="scss" scoped>
+  @import '../style/vars';
 
-  %secondary
-    color: $secondary
-    display: block
-    font-size: 12px
-    margin-top: -4px
+  %secondary {
+    color: $secondary;
+    display: block;
+    font-size: 12px;
+    margin-top: -4px;
+  }
 
-  .CurrentWeather
-    background: lighten($bg, 3)
-    border-radius: 4px
-    box-shadow: 0 1px 4px rgba(black, 0.18)
-    min-width: 56px * 4
-    padding: 20px 24px
-    text-align: center
+  .CurrentWeather {
+    background: lighten($bg, 3);
+    border-radius: 4px;
+    box-shadow: 0 1px 4px rgba(black, 0.18);
+    min-width: 56px * 4;
+    padding: 20px 24px;
+    text-align: center;
+  }
 
-  .CurrentWeather-heading
-    margin-bottom: 24px
-    span
-      @extend %secondary
+  .CurrentWeather-heading {
+    margin-bottom: 24px;
+    span {
+      @extend %secondary;
+    }
+  }
 
-  .CurrentWeather-icon
-    @include size(50px)
+  .CurrentWeather-icon {
+    @include size(50px);
+  }
 
-  .CurrentWeather-status
-    margin-bottom: 12px
-    span
-      @extend %secondary
+  .CurrentWeather-status {
+    margin-bottom: 12px;
+    span {
+      @extend %secondary;
+    }
+  }
 
   .CurrentWeather-pressure,
   .CurrentWeather-humidity,
-  .CurrentWeather-wind
-    font-size: 14px
-    margin-bottom: 4px
+  .CurrentWeather-wind {
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
 
-  .CurrentWeather-wind
-    span
-      @extend %secondary
+  .CurrentWeather-wind {
+    span {
+      @extend %secondary;
+    }
+  }
 </style>
