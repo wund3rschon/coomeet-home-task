@@ -8,7 +8,7 @@ The goal is to build a simple app showing current weather based on user's locati
 - any free weather forecasting API (e.g. https://openweathermap.org/api)
 - error processing (API errors, no access to Geolocation API, etc.)
 - HTML layouts should not use frameworks
-- no external libraries
+- no external libraries except for basic vue-cli setup
 
 ## Project setup
 
